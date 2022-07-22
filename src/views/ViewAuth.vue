@@ -56,7 +56,8 @@
             </p>
           </div>
         </form>
-
+        <p>User 1: test@test.com, Pass: qwerty</p>
+        <p>User 2: test1@test.com, Pass: qwerty</p>
       </div>
     </div>
   </div>
