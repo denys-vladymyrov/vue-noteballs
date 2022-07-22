@@ -6,7 +6,8 @@ import { useStoreNotes } from '@/stores/storeNotes'
 export const useStoreAuth = defineStore('storeAuth', {
   state: () => {
     return { 
-      user: {}
+      user: {},
+      initialisation: false
     }
   },
   actions: {
@@ -24,6 +25,7 @@ export const useStoreAuth = defineStore('storeAuth', {
           this.router.replace('/auth')
           storeNotes.clearNotes()
         }
+        this.initialisation = true
       })
     },
     registerUser(credentials) {

@@ -36,7 +36,7 @@ const router = createRouter({
 // navigation guards
 router.beforeEach(async (to, from) => {
   const storeAuth = useStoreAuth()
-  if (!storeAuth.user.id && to.name !== 'auth') {
+  if (!storeAuth.user.id && to.name !== 'auth' && storeAuth.initialisation) {
     return { name: 'auth' }
   }
   if (storeAuth.user.id && to.name === 'auth') {
